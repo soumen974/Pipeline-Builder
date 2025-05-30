@@ -11,19 +11,19 @@ function App() {
   return (
     <div className="">
       <div className="max">
-        <header className="p-6 hidden absolute flex gap-5 z-50  justify-center items-center border-b border-gray-200">
+        {/* <header className="p-6 hidden absolute flex gap-5 z-50  justify-center items-center border-b border-gray-200">
           <h1 className="text-3xl font-bold text-gray-900">Pipeline Builder</h1>
           <p className="text-gray-600 mt-2">Create and visualize your data processing pipelines</p>
-        </header>
+        </header> */}
         
         <PipelineToolbar />
         
         <div className="p-">
           <PipelineUI 
-            nodes={nodes} 
-            setNodes={setNodes} 
-            edges={edges} 
-            setEdges={setEdges} 
+            nodesFromApp={nodes} 
+            setNodesFromApp={setNodes} 
+            edgesFromApp={edges} 
+            setEdgesFromApp={setEdges} 
           />
         </div>
         

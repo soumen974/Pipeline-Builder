@@ -11,14 +11,15 @@ export const SubmitButton = ({ nodes, edges }) => {
   const submitPipeline = async () => {
     if (nodes.length === 0) {
       showAlert('Please add at least one node to your pipeline before submitting.', 'error');
+      console.log('Submitting pipeline:', { nodes, edges });
       return;
     }
 
     setIsSubmitting(true);
-    console.log('Submitting pipeline:', { nodes, edges });
+    
 
     try {
-      const response = await api.post('/pipelines/parse', {
+      const response = await axios.post('http://localhost:8000/pipelines/parse', {
         nodes,
         edges,
       });

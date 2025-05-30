@@ -50,9 +50,9 @@ export const PipelineUI = memo(({ nodesFromApp, setNodesFromApp, edgesFromApp, s
     } = useStore(selector, shallow);
 
     // Logger for development
-    // if (process.env.NODE_ENV === 'development') {
-    //   console.log('PipelineUI rendered with nodes:', nodes, 'and edges:', edges);
-    // }
+    if (process.env.NODE_ENV === 'development') {
+      console.log('PipelineUI rendered with nodes:', nodes, 'and edges:', edges);
+    }
 
     const getInitNodeData = useCallback((nodeID, type) => {
       return { 
